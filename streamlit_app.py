@@ -189,7 +189,8 @@ def apply_gradcam_overlay(image, heatmap, alpha=0.4):
 # ==========================
 # Model and API Client Loading Functions
 # ==========================
-@st.cache(allow_output_mutation=True)
+# @st.cache(allow_output_mutation=True)
+st.cache_resource
 def load_dermatology_model():
     try:
         # Load your pre-trained dermatology model from my_model.keras
@@ -201,7 +202,8 @@ def load_dermatology_model():
         logger.error(f"Error loading dermatology model: {str(e)}")
         raise
 
-@st.cache(allow_output_mutation=True)
+# @st.cache(allow_output_mutation=True)
+st.cache_resource
 def load_feature_extractor():
     try:
         model = ResNet50(weights='imagenet', include_top=True)
@@ -211,7 +213,8 @@ def load_feature_extractor():
         logger.error(f"Error loading ResNet50 feature extractor: {str(e)}")
         raise
 
-@st.cache(allow_output_mutation=True)
+# @st.cache(allow_output_mutation=True)
+st.cache_resource
 def load_gpt4_vision_client():
     try:
         api_key = os.getenv("OPENAI_API_KEY")
@@ -224,7 +227,8 @@ def load_gpt4_vision_client():
         logger.error(f"Error initializing GPT-4 Vision client: {str(e)}")
         raise
 
-@st.cache(allow_output_mutation=True)
+# @st.cache(allow_output_mutation=True)
+st.cache_resource
 def load_claude_client():
     try:
         api_key = os.getenv("ANTHROPIC_API_KEY")
