@@ -5,7 +5,7 @@ scikit-learn
 lightgbm
 catboost
 matplotlib
-opencv-python
+opencv-python-headless
 tensorflow
 anthropic
 openai
