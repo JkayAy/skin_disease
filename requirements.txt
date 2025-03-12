@@ -1,0 +1,12 @@
+streamlit
+numpy
+pandas
+scikit-learn
+lightgbm
+catboost
+matplotlib
+opencv-python
+tensorflow
+anthropic
+openai
+python-dotenv
