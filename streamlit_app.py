@@ -399,7 +399,7 @@ def main():
 
     # Display the uploaded image preview (if available)
     if st.session_state.uploaded_file is not None:
-        st.image(st.session_state.uploaded_file, caption="Uploaded Image", width=300, use_column_width=True)
+        st.image(st.session_state.uploaded_file, caption="Uploaded Image", width=300, use_container_width=True)
 
     # Collect patient information from the sidebar
     patient_record = create_sidebar()
@@ -445,9 +445,9 @@ def main():
                             st.markdown("### GradCAM Visualization")
                             col1, col2 = st.columns(2)
                             with col1:
-                                st.image(original_img, caption="Original Image", use_column_width=True)
+                                st.image(original_img, caption="Original Image", use_container_width=True)
                             with col2:
-                                st.image(overlay_img, caption="GradCAM Overlay", use_column_width=True)
+                                st.image(overlay_img, caption="GradCAM Overlay", use_container_width=True)
                         except Exception as e:
                             st.error(f"GradCAM visualization failed: {str(e)}")
                 except Exception as e:
@@ -475,9 +475,9 @@ def main():
             #             st.markdown("### GradCAM Visualization")
             #             col1, col2 = st.columns(2)
             #             with col1:
-            #                 st.image(original_img, caption="Original Image", use_column_width=True)
+            #                 st.image(original_img, caption="Original Image", use_container_width=True)
             #             with col2:
-            #                 st.image(overlay_img, caption="GradCAM Overlay", use_column_width=True)
+            #                 st.image(overlay_img, caption="GradCAM Overlay", use_container_width=True)
             #         except Exception as e:
             #             st.error(f"GradCAM visualization failed: {str(e)}")
             #     except Exception as e:
